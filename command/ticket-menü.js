@@ -6,7 +6,8 @@ module.exports = {
     category: "",
     description: ``,
     async execute(client, message, args) {
-	let emoji = args[0]
+	if(!message.member.permissions.has("ADMINISTRATOR")) return message.channel.send("Bu komutu kullanabilmek için **Yönetici** yetkisine sahip olman gerekiyor!")
+	    let emoji = args[0]
 	if (!emoji) return message.channel.send("Lütfen 1. emojiyi gir!")
 	let emoji2 = args[1]
 	if (!emoji2) return message.channel.send("Lütfen 2. emojiyi gir!")
