@@ -2,9 +2,9 @@ const {MessageActionRow, MessageSelectMenu} = require('discord.js')
 const db = require("croxydb")
 module.exports = {
     name: 'ticket-menü',
-    usage: 'Şablon',
-    category: "mod",
-    description: `Şablon komutu.`,
+    usage: '',
+    category: "",
+    description: ``,
     async execute(client, message, args) {
 	let emoji = args[0]
 	if (!emoji) return message.channel.send("Lütfen 1. emojiyi gir!")
