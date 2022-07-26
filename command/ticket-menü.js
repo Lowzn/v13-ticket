@@ -24,7 +24,7 @@ module.exports = {
 		let menu3 = args[5]
 		
 		if (!menu3) return message.channel.send("3. Menü Yazısını Yaz!");
-		let mesaj = args[6]
+		 let mesaj = args.slice(6).join(" ")
 		if (!mesaj) return message.channel.send("Embed Mesaj Yazısını Yaz!")
   let hm = await db.get("destek"+ message.guild.id)
   if(!hm) return message.channel.send('Destek Rolü Ayarlamadan Menüyü Göremezsin :D?')
